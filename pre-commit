@@ -2,7 +2,8 @@
 # this script outsources HTML auxiliary files to CDNs.
 # this reduces the footprint of the repository significantly.
 # beware, it will stage any unstaged changes before committing.
-# add it to your local githooks directory for this repository.
+# add it to your local githooks directory for this repository,
+# and run this from a terminal window: chmod +x .git/hooks/pre-commit
 
 # check these variables (using forward slashes instead of backslashes):
 R_SCRIPT="/usr/local/bin/Rscript" # the location of Rscript on your computer
