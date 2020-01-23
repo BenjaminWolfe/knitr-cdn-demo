@@ -1,0 +1,22 @@
+#!/bin/sh
+# this script outsources HTML auxiliary files to CDNs.
+# this reduces the footprint of the repository significantly.
+# beware, it will stage any unstaged changes before committing.
+# add it to your local githooks directory for this repository.
+
+# check these variables (using forward slashes instead of backslashes):
+R_SCRIPT="/usr/local/bin/Rscript" # the location of Rscript on your computer
+CDN_SCRIPT="cdnify.R"             # the location of the R script in the repo
+
+# find the local REPO directory
+HOOKS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+GIT_DIR="$(dirname "$HOOKS_DIR")"
+REPO="$(dirname "$GIT_DIR")"
+
+# switch to CDNs
+"$R_SCRIPT" "$REPO/$CDN_SCRIPT" "$REPO"
+
+# stage updated files
+git add -u
+
+exit 0

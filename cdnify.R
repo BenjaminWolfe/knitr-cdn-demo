@@ -110,18 +110,17 @@ cdnify <- function(html_file) { # without .html extension
   print(keep_these)
   message("files removed:")
   print(remove_these)
-  
-  # just for my blog post
-  write_csv(
-    select(references, pattern, expected_vsn, actual_vsn, cdn_url),
-    here("notes/replacements.csv")
-  )
-  write_lines(keep_these, here("notes/files_kept.txt"))
-  write_lines(remove_these, here("notes/files_removed.txt"))
 }
 
+current_dir <- 
+  if (interactive()) {
+    here()
+  } else {
+    as.character(commandArgs(trailingOnly = T)[1])
+  }
+
 pages <- 
-  here() %>% 
+  current_dir %>% 
   dir_ls(recurse = T, regexp = "\\.html") %>% 
   str_replace("\\.html$", "")
 
