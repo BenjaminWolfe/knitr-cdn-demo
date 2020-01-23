@@ -1,0 +1,8 @@
+/Users/benjamin/Documents/GitHub/knitr-cdn-demo/report_files/navigation-1.1/tabsets.js
+/Users/benjamin/Documents/GitHub/knitr-cdn-demo/report_files/htmlwidgets-1.5.1/htmlwidgets.js
+/Users/benjamin/Documents/GitHub/knitr-cdn-demo/report_files/datatables-css-0.0.0/datatables-crosstalk.css
+/Users/benjamin/Documents/GitHub/knitr-cdn-demo/report_files/datatables-binding-0.11/datatables.js
+/Users/benjamin/Documents/GitHub/knitr-cdn-demo/report_files/dt-core-1.10.19/css/jquery.dataTables.extra.css
+/Users/benjamin/Documents/GitHub/knitr-cdn-demo/report_files/crosstalk-1.0.0/css/crosstalk.css
+/Users/benjamin/Documents/GitHub/knitr-cdn-demo/report_files/crosstalk-1.0.0/js/crosstalk.min.js
+/Users/benjamin/Documents/GitHub/knitr-cdn-demo/report_files/figure-html/pressure-1.png

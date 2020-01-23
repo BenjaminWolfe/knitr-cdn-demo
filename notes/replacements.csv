@@ -1,0 +1,10 @@
+pattern,expected_vsn,actual_vsn,cdn_url
+report_files/jquery-(\d+\.\d+\.\d+)/jquery\.min\.js,1.12.4,1.12.4,https://code.jquery.com/jquery-1.12.4.min.js
+report_files/bootstrap-(\d+\.\d+\.\d+)/css/bootstrap\.min\.css,3.3.5,3.3.5,https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css
+report_files/bootstrap-(\d+\.\d+\.\d+)/js/bootstrap\.min\.js,3.3.5,3.3.5,https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js
+report_files/bootstrap-(\d+\.\d+\.\d+)/shim/html5shiv\.min\.js,3.3.5,3.3.5,https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js
+report_files/bootstrap-(\d+\.\d+\.\d+)/shim/respond\.min\.js,3.3.5,3.3.5,https://oss.maxcdn.com/respond/1.4.2/respond.min.js
+report_files/highlightjs-(\d+\.\d+\.\d+)/default\.css,9.12.0,9.12.0,https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/default.min.css
+report_files/highlightjs-(\d+\.\d+\.\d+)/highlight\.js,9.12.0,9.12.0,https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js
+report_files/dt-core-(\d+\.\d+\.\d+)/css/jquery\.dataTables\.min\.css,1.10.19,1.10.19,https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css
+report_files/dt-core-(\d+\.\d+\.\d+)/js/jquery\.dataTables\.min\.js,1.10.19,1.10.19,https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js
