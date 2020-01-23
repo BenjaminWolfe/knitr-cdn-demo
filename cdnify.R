@@ -1,10 +1,98 @@
 # TODO: currently removes dependencies but not empty directories (low priority)
 # TODO: could be useful to note when the version number is not as expected.
 
-library(tidyverse)
-library(here) # relative filepaths
-library(glue) # string manipulation
-library(fs)   # file system utilities
+# load packages, installing if not present
+load_packages <- function(packages) {
+  
+  # function to attempt loading, silently
+  try_loading <- function(target_packages) {
+    sapply(
+      target_packages,
+      function(package) {
+        suppressPackageStartupMessages(
+          require(
+            package,
+            quietly        = TRUE,
+            warn.conflicts = FALSE,
+            character.only = TRUE
+          )
+        )
+      }
+    )
+  }
+  
+  # full report: what packages were required?
+  message(
+    "required packages: ",
+    paste(
+      packages,
+      collapse = " "
+    )
+  )
+  
+  # attempt to load all
+  # if all succeeded, easy message.
+  loaded_first <- try_loading(packages)
+  if (all(loaded_first)) {
+    message(
+      "loaded: ",
+      paste0(
+        packages,
+        collapse = " "
+      )
+    )
+    return(invisible())
+  }
+  
+  # install remaining packages & message the installation attempts
+  install_these <- packages[!loaded_first]
+  install.packages(install_these)
+  message(
+    "installed or attempted to install: ",
+    paste(
+      install_these,
+      collapse = " "
+    )
+  )
+  
+  # reattempt loading & message any successes from either attempt
+  loaded_second <- try_loading(install_these)
+  if (any(loaded_first) || any(loaded_second)) {
+    message(
+      "loaded: ",
+      paste(
+        c(packages[loaded_first], install_these[loaded_second]),
+        collapse = " "
+      )
+    )
+  }
+  
+  # message any failures from second try
+  if (any(!loaded_second)) {
+    message(
+      "failed to load: ",
+      paste(
+        install_these[!loaded_second],
+        collapse = " "
+      )
+    )
+  }
+  
+  invisible()
+}
+
+load_packages(
+  c(
+    "tibble",
+    "dplyr",
+    "stringr",
+    "purrr",
+    "readr",
+    "glue",
+    "here",
+    "fs"
+  )
+)
 
 semver <- "(\\d+\\.\\d+\\.\\d+)"
 
