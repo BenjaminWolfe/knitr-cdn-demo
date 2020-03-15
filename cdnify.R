@@ -1,5 +1,6 @@
-# TODO: currently removes dependencies but not empty directories (low priority)
-# TODO: could be useful to note when the version number is not as expected.
+# See README.md for usage.
+# TODO: currently removes dependencies but doesn't tidy up empty directories.
+# TODO: could be useful to asterisk when the version number is not as expected.
 
 # load packages, installing if not present
 load_packages <- function(packages) {
